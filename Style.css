@@ -4,8 +4,148 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(to right, #10133b 40%, #d5d7db 100%);
+    background: linear-gradient(to right, #10133b 50%, #d5d7db 150%);
+}
+
+/*NAVBAR*/
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 25px 50px;
+    width: 100%;
+    background: rgba(16, 19, 59, 0.315);
+    backdrop-filter: blur(10px);
+    box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(90, 120, 255, 0.15);
+}
+
+.nomeEmpresa {
+    margin-left: auto;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/*LINKS*/
+.nav-links {
+    justify-content: left;
+    position: relative;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+}
+
+/*BOLINHA ANIMADA*/
+.hover-pill {
+    position: absolute;
+
+    width: 100px;
+    height: 75px;
+
+    background: #044D8c;
+
+    border-radius: 20px;
+
+    left: 10px;
+    top: 50%;
+
+    transform: translateY(-50%) scale(1);
+
+    opacity: 0;
+
+    transition:
+    left 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.25s ease,
+    transform 0.3s ease;
+
+    z-index: 0;
+
+    box-shadow:
+    0 0 20px rgba(22, 180, 242, 0.5);
+}
+
+.nav-links li {
+    position: relative;
+    z-index: 1;
+}
+
+/*LINKS DA NAVBAR*/
+.nav-links a {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 12px 20px;
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+/*ÍCONE*/
+.nav-links a i {
+    font-size: 22px;
+}
+
+/*HOVER*/
+.nav-links a:hover {
+    transform: translateY(-2px);
+}
+
+/*SEÇÃO INICIAL*/
+.Inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    height: 100vh;
+}
+
+.Titulo {
+    color: #fcfcfc;
+    font-size: 70px;
+
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.Titulo span {
+    color: #7dd8ff;
+}
+
+.Subtitulo {
+    color: #fcfcfc;
+    font-size: 24px;
+
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.Logo {
+    position: absolute;
+    right: 200px;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 500px;
+    font-size: 100px;
+    color: white;
 }
