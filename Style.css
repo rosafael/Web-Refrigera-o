@@ -8,8 +8,17 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --CorP1:#6e88b0;
+    --CorP2: #7dd8ff;
+    --CorP3: #2E3A4D;
+    --background-color: #f2e0d0;
+    --text-color: #f2e0d0;
+    --text-color2: #6e88b0;
+}
+
 body {
-    background: linear-gradient(to right, #10133b 50%, #d5d7db 150%);
+    background: linear-gradient(to bottom, var(--CorP1) 70%, var(--background-color));
 }
 
 /*NAVBAR*/
@@ -19,11 +28,11 @@ body {
     align-items: center;
     padding: 20px 50px;
     width: 100%;
-    background: rgba(16, 19, 59, 0.486);
+    background: var(--CorP1);
     backdrop-filter: blur(10px);
     box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.35),
-    0 0 25px rgba(90, 120, 255, 0.15);
+    0 3px 10px rgba(0, 0, 0, 0.15),
+    0 0 10px rgba(90, 120, 255, 0.15);
 }
 
 .LogoNav {
@@ -58,12 +67,12 @@ body {
     align-items: center;
     justify-content: center;
 
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
 }
 .nav-links a:hover, .nav-links li:hover, .LogoNav:hover {
     transform: scale(1.1);
-    color: #7dd8ff;
+    color: var(--CorP2);
 }
 
 /*SEÇÃO INICIAL*/
@@ -85,16 +94,16 @@ body {
 }
 
 .Titulo {
-    color: #fcfcfc;
+    color: var(--text-color);
     font-size: 70px;
 }
 
 .Titulo span {
-    color: #7dd8ff;
+    color: var(--CorP2);
 }
 
 .Subtitulo {
-    color: #fcfcfc;
+    color: var(--text-color);
     font-size: 24px;
 }
 
@@ -109,7 +118,45 @@ body {
 }
 
 .Legenda {
-    color: white;
+    color: var(--text-color);
     font-size: 18px;
     margin-top: 10px;
+}
+
+.linha-brilho{
+    width: 90%;
+    height: 2px;
+    margin: 50px auto;
+
+    background: linear-gradient(to right,transparent 15%,var(--CorP1),transparent 15%);
+
+    box-shadow:
+    0 0 10px var(--CorP2),
+    0 0 20px var(--CorP3);
+}
+
+/*SEÇÃO DE QUALIDADE*/
+.Qualidade {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    height: 100vh;
+}
+
+.Time {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+.TimerIcon {
+    margin-bottom: 70vh;
+    width: 100%;
+    margin-left: 20%;
+}
+
+.TxtTime {
+    color: var(--text-color);
+    font-size: 24px;
+    margin-left: 20%;
 }
